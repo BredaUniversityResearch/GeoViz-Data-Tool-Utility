@@ -1,0 +1,74 @@
+{
+  "name": "geoviz-data-tool",
+  "version": "1.0.0",
+  "description": "Desktop application for validating and processing NetCDF particle tracking files",
+  "author": {
+    "name": "Dr. Xavier Fonseca",
+    "email": "xavier.fonseca@buas.nl",
+    "url": "https://www.linkedin.com/in/xavier-fonseca/"
+  },
+  "homepage": ".",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BredaUniversityResearch/MicroparticlesVisualization-ILIAD"
+  },
+  "license": "GPL-3.0",
+  "main": "electron/main.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "electron:dev": "concurrently \"cross-env BROWSER=none npm start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron:build": "npm run build && electron-builder"
+  },
+  "dependencies": {
+    "lucide-react": "^0.546.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-scripts": "^5.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "concurrently": "^9.2.1",
+    "cross-env": "^10.1.0",
+    "electron": "^38.3.0",
+    "electron-builder": "^26.0.12",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.0",
+    "wait-on": "^9.0.1"
+  },
+  "build": {
+    "appId": "com.buas.geoviz.datatool",
+    "productName": "GeoViz Data Tool",
+    "copyright": "Copyright © 2025 Dr. Xavier Fonseca, Breda University of Applied Sciences",
+    "files": [
+      "build/**/*",
+      "electron/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "extraMetadata": {
+      "main": "electron/main.js"
+    },
+    "win": {
+      "target": [
+        "portable"
+      ]
+    },
+    "directories": {
+      "buildResources": "assets",
+      "output": "dist"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
