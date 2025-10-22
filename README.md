@@ -299,6 +299,8 @@ This program is distributed in the hope that it will be useful, but **WITHOUT AN
 
 Full license: [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
+Repository originally created in [My Personal GitHub](https://github.com/xavierfonsecaphd/GeoViz-Data-Tool-Utility).
+
 ---
 
 ## 💬 Support & Contact
